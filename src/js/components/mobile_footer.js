@@ -9,7 +9,7 @@ const MenuItemGroup = Menu.ItemGroup;
 export default class MobileFooter extends React.Component{
 	render(){
 		return(
-			<header>
+			<footer>
 				<Row>
 			      <Col span={2}></Col>
 			      <Col span={20} class="footer">
@@ -17,7 +17,7 @@ export default class MobileFooter extends React.Component{
 			      </Col>
 			      <Col span={2}></Col>
 			    </Row>
-			</header>
+			</footer>
 		);
 	}
 }

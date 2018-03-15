@@ -64,6 +64,11 @@ class MobileHeader extends React.Component{
 			this.setState({action: 'register'});
 		}
 	};
+	
+	handleCancle(){
+		this.setState({modalVisible:false});
+	};
+
 	render(){
 		let {getFieldProps} = this.props.form;
 		const userShow = this.state.hasLogined?
@@ -85,8 +90,10 @@ class MobileHeader extends React.Component{
 			</header>
 
 			<Modal title="用户中心" visible={this.state.modalVisible}
-				onCancle={()=>this.setState({modalVisible:false})}
-				onOk={()=>this.setState({modalVisible:false})}
+				/*onCancle={()=>this.setState({modalVisible:false})}
+				onOk={()=>this.setState({modalVisible:false})}*/
+				onCancel={this.handleCancle.bind(this)}
+				onOk={this.handleCancle.bind(this)}
 				okText = "关闭"
 				>
 				<Tabs type="card" onChange={this.callback.bind(this)}>
